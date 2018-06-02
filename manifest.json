@@ -1,0 +1,37 @@
+{
+    "manifest_version": 2,
+  
+    "name": "Faktisk-no plugin",
+    "description": "Checks if current url have been fact checked",
+    "version": "1.0",
+
+    "background": {
+      "scripts": ["background.js", "jquery.js"],
+      "persistent": true
+    },
+
+    "browser_action": {
+      "default_icon": "img/icon_3.png",
+      "default_popup": ""
+    },
+
+    "icons": { 
+        "16": "img/icon_3.png"
+       },
+
+    "content_scripts": [
+        {
+          "matches": ["<all_urls>"],
+          "css": [],
+          "js": ["jquery.js", "popper.js"]
+        }
+      ],
+
+    "permissions": [
+        "activeTab",
+        "tabs",
+        "contextMenus",
+        "https://dehv.net/*",
+        "notifications"
+      ]
+  }
